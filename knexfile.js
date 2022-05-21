@@ -3,6 +3,8 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+
+
 module.exports = {
 
   development: {
@@ -13,10 +15,12 @@ module.exports = {
     useNullAsDefault:true
   },
 
-  // pool:{
-  //   afterCreate:(conn,done) =>{
-  //     conn.run{"PRAGMA foreign_keys=ON",done}
-  //   }
-  // }
+  pool:{
+    afterCreate:(conn,done) =>{
+      conn.run("PRAGMA foreign_keys=ON",done)
+    }
+  }
 
 };
+
+//alsdfjasöldfjasöldfjasöldfjalösdf
