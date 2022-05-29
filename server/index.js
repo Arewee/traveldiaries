@@ -3,9 +3,10 @@ const res = require('express/lib/response');
 const { get } = require('express/lib/response');
 const app = express();
 const port = 5555;
-
+const cors = require('cors')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
+app.use(cors({origin:'*'}))
 
 //IMPORT ROUTERS
 
